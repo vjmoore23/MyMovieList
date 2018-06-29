@@ -1,0 +1,24 @@
+Image slide
+
+https://pixabay.com/en/sunset-cinema-demonstration-film-3189813/
+https://pixabay.com/en/banner-header-film-cinema-video-1155437/
+https://pixabay.com/en/clapper-hollywood-cinema-board-2140602/
+
+
+
+menu
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_right
+
+slide show
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto
+
+
+Movie poster
+https://www.google.com/search?q=movie+poster&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjJlYy3l4_aAhWQmeAKHapwASsQ_AUICigB&biw=1280&bih=615
+
+pagination number grid
+
+https://www.w3schools.com/css/css3_pagination.asp
+
+tab
+https://www.w3schools.com/howto/howto_js_tabs.asp

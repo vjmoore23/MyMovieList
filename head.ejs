@@ -1,0 +1,22 @@
+<meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" http-equiv="X-XSS-Protection" content="1" />
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+
+
+<link href="/stylesheets/style.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/gif" href="images/MyMovieListFavIcon.gif"/>
+
+<link rel="stylesheet_boot" href="/css/bootstrap.min.css" />
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+   if (self === top) {
+       var antiClickjack = document.getElementById("antiClickjack");
+       antiClickjack.parentNode.removeChild(antiClickjack);
+   } else {
+       top.location = self.location;
+   }
+</script>

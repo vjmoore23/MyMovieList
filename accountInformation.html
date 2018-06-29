@@ -1,0 +1,270 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Movie Websites</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="icon" 
+      type="image/gif" 
+      href="images/MyMovieListFavIcon.gif"/>
+	  
+<script src="mmlSearch.js"></script>
+<script src="insertUser.js"></script>
+<script src="accountTab.js"></script>		  
+<script>
+
+window.onload = function() {
+    
+	var index = 0;
+            changeSlide();
+
+        function changeSlide() {
+             var i;
+             var x = document.getElementsByClassName("slides");
+             for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+             }
+             index++;
+            if (index > x.length) {
+			    index = 1
+				
+				}    
+				
+            x[index-1].style.display = "block";  
+            setTimeout(changeSlide, 2000); // Change image every 2 seconds
+      }
+}
+
+
+
+</script>
+
+</head>
+<body>
+
+
+
+<div id="main_wrapper">
+
+	<div id="top_header">
+    	<div id="title">
+            
+			<img class="logo" src="images/MyMovieListLogo.png" alt="logo" /> <span id = "sitetitle"> to Watch</span><span id ="sitetitle2"> and Enjoy</span>
+			
+			
+			
+        </div>
+        
+		
+        <div id="search">
+		    
+			
+        	<form method="get" action="javascript:void(0)" onsubmit="search(this); return false;">
+                <label>Search:</label><input type=text name=srchval value="">
+                <input class="button_input" type="submit" value="Search" />
+            </form>
+        </div>
+		
+    </div>
+
+	
+    
+	<img src="images/banner.jpg" alt="banner" class="bannerIMG" />
+    <div id="navigation">
+     	<ul>
+			<li><a class= "navigation_border" href="index.html" >Home</a></li>
+			<li>
+			  
+			   <div class="dropdown" >
+                 <a class= "navigation_border" href="#" >Login </a>
+			
+                <div class="dropdown-content">
+                 <a href="signIn.html">Sign In</a>
+                 <a href="createAccount.html">Create Account</a>
+      
+              </div>
+             </div> 
+			
+		   </li>
+		   
+           <li><a class= "navigation_border" href="accountInformation.html">Account</a></li>
+           <li>
+		   
+		     <div class="dropdown" >
+                 <a  class= "navigation_border" href="#" >Movies </a>
+			
+                <div class="dropdown-content">
+                 <a href="#">All</a>
+				 <a href="movieYears.html">Year</a>
+                 <a href="movieGenre.html">Genre</a>
+				 <a href="movieRate.html">Rating</a>
+      
+              </div>
+             </div> 
+		     
+		   
+		   </li>  
+            
+           <li><a href="contact.html" class="lastnav" >Contact</a></li>            
+        </ul>  
+		
+    </div>
+	<img src="images/banner.jpg" alt="banner" class="bannerIMG" />
+    
+    <div id="content">
+    
+	    <div >
+                  <img class="slides" src="images/slide.jpg" alt="slide1" />
+                  <img class="slides" src="images/slide2.jpg" alt="slide2" />
+				 
+  
+  
+        </div>
+		
+		
+        
+        <div>
+        	<div>
+            	<h1 class= "styleHeader">Account Information</h1>
+            	
+			      <table id = "tableProfile">
+                   <tr>
+                       <td id="profile"><label>Username</label></td>
+                   </tr>
+                   
+                  <tr>
+                    <td>
+					   
+					   <div class="tabInfo">
+					      <button  id="defaultClicked" class="tabPress" onclick="openDiv(event, 'general')">---</button>
+                          <button  class="tabPress" onclick="openDiv(event, 'profileInfo')">Profile Information</button>
+                          <button class="tabPress" onclick="openDiv(event, 'WatchedList')">Watched List</button>
+                          <button class="tabPress" onclick="openDiv(event, 'PlantoWatch')">Plan to Watch</button>
+                      </div>
+
+					  
+					  <div id="general" class="tabContent_account">
+                       
+					   
+					   <p> 
+					      Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus.
+						  Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus.
+						  Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus.
+						  Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus.
+						  Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus.
+						  Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus.
+						  Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus.
+						  Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus.
+					   </p>
+                        
+						
+                       </div>
+					   
+                      <div id="profileInfo" class="tabContent_account">
+                       <h3>Profile Information</h3>
+                        
+						
+                       </div>
+
+                     <div id="WatchedList" class="tabContent_account">
+                     <h3>Watched List</h3>
+					 
+					 
+					      <div class="grid-container2">
+                                 <div class="grid-item">1</div>
+                                 <div class="grid-item">2</div>
+                                 <div class="grid-item">3</div>  
+                                 <div class="grid-item">4</div>
+                                 <div class="grid-item">5</div>
+                                 <div class="grid-item">6</div>  
+                                 <div class="grid-item">7</div>
+                                 <div class="grid-item">8</div>
+                                <div class="grid-item">9</div>  
+                         </div>
+
+			             <div class="pagination2">
+                             <a href="#">&laquo;</a>
+                             <a href="#">1</a>
+                             <a href="#">2</a>
+                             <a href="#">3</a>
+                             <a href="#">4</a>
+                             <a href="#">5</a>
+                  
+                           <a href="#">&raquo;</a>
+                          </div>
+			    
+					 
+					 
+  
+                     </div>
+
+                      <div id="PlantoWatch" class="tabContent_account">
+                     <h3>Plan to Watch</h3>
+  
+                    </div>
+					
+					
+					</td>
+                    
+                 </tr>
+               </table>
+			
+			  
+			 </div>
+				
+            </div>
+            
+            
+                <div id="popular_section">
+                    <h1 class= "styleHeader">Popular movies </h1>
+                    <div class="popular_box">
+                        <img src="images/sample.jpg" alt="image" />
+                        <h3>Title 1</h3> 
+                        
+                        <p>Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus. <a href="#">more...</a>
+                        </p>
+                    </div>
+                    <div class="popular_box">
+                        <img src="images/sample.jpg" alt="image" />
+                        <h3>Title 2</h3> 
+                        
+                        <p> Fusce vulputate tellus ac felis. Praesent mauris. Quisque gravida faucibus ligula. Aliquam magna. Phasellus id felis. <a href="#">more...</a>
+                        </p>
+                    </div>
+					
+					<div class="popular_box">
+                        <img src="images/sample.jpg" alt="image" />
+                        <h3>Title 3</h3> 
+                        
+                        <p> Fusce vulputate tellus ac felis. Praesent mauris. Quisque gravida faucibus ligula. Aliquam magna. Phasellus id felis. <a href="#">more...</a>
+                        </p>
+                    </div>
+					<div class="popular_box">
+                        <img src="images/sample.jpg" alt="image" />
+                        <h3>Title 3</h3> 
+                        
+                        <p> Fusce vulputate tellus ac felis. Praesent mauris. Quisque gravida faucibus ligula. Aliquam magna. Phasellus id felis. <a href="#">more...</a>
+                        </p>
+                    </div>
+                    <div class="moreInfo2"><a href="#">View All</a></div>
+                </div> 
+                
+                
+     
+            
+		</div>
+    </div>
+    
+    
+	<div id="footer">
+        <a href="#">Home</a> | <a href="#">Videos</a> | <a href="#">Videos</a> | <a href="#">Videos</a> | <a href="#">Videos</a> | <a href="#">Contact</a><br />
+        Copyright © <a href="#"><strong>Name</strong></a> 
+        
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Movie Websites</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="icon" 
+      type="image/gif" 
+      href="images/MyMovieListFavIcon.gif"/>
+<script src="mmlSearch.js"></script>
+<script src="insertUser.js"></script>	  
+<!--<script>
+
+window.onload = function() {
+    
+	var index = 0;
+            changeSlide();
+
+        function changeSlide() {
+             var i;
+             var x = document.getElementsByClassName("slides");
+             for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+             }
+             index++;
+            if (index > x.length) {
+			    index = 1
+				
+				}    
+				
+            x[index-1].style.display = "block";  
+            setTimeout(changeSlide, 2000); // Change image every 2 seconds
+      }
+}
+
+
+
+
+
+</script>-->
+
+</head>
+<body>
+
+
+
+<div id="main_wrapper">
+
+	<div id="top_header">
+    	<div id="title">
+            
+			<img class="logo" src="images/MyMovieListLogo.png" alt="logo" /> <span id = "sitetitle"> to Watch</span><span id ="sitetitle2"> and Enjoy</span>
+			
+			
+			
+        </div>
+		
+		<a id="logout_user" class="logoutLink" href="#">
+          
+			<img  class="logout_icon" src="images/logout.jpg" alt="logout" /> LogOut
+        </a>
+		
+        
+		
+        <div id="search">
+		    
+			<form method="get" action="javascript:void(0)" onsubmit="search(this); return false;">
+                <label>Search:</label><input type=text name=srchval value="">
+                <input class="button_input" type="submit" value="Search" />
+            </form>
+        </div>
+		
+    </div>
+
+	
+    
+	<img src="images/banner.jpg" alt="banner" class="bannerIMG" />
+    <div id="navigation">
+     	<ul>
+			<li><a class= "navigation_border" href="index.html" >Home</a></li>
+			<li>
+			  
+			   <div class="dropdown" >
+                 <a class= "navigation_border" href="#" >Login </a>
+			
+                <div class="dropdown-content">
+                 <a href="signIn.html">Sign In</a>
+                 <a href="createAccount.html">Create Account</a>
+      
+              </div>
+             </div> 
+			
+		   </li>
+		   
+           <li><a class= "navigation_border" href="accountInformation.html">Account</a></li>
+           <li>
+		   
+		     <div class="dropdown" >
+                 <a  class= "navigation_border" href="#" >Movies </a>
+			
+                <div class="dropdown-content">
+				 <a href="#">All</a>
+                 <a href="movieYears.html">Year</a>
+                 <a href="movieGenre.html">Genre</a>
+				 <a href="movieRate.html">Rating</a>
+      
+              </div>
+             </div> 
+		     
+		   
+		   </li>  
+            
+           <li><a href="contact.html" class="lastnav" >Contact</a></li>            
+        </ul>  
+		
+    </div>
+	<img src="images/banner.jpg" alt="banner" class="bannerIMG" />
+    
+    <div id="content">
+    
+	    <div >
+                  <img class="slides" src="images/slide.jpg" alt="slide1" />
+                  <img class="slides" src="images/slide2.jpg" alt="slide2" />
+				 
+  
+  
+        </div>
+		
+		<script>
+
+         
+    
+	        var index = 0;
+            changeSlide();
+
+        function changeSlide() {
+             var i;
+             var x = document.getElementsByClassName("slides");
+             for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+             }
+             index++;
+            if (index > x.length) {
+			    index = 1
+				
+				}    
+				
+            x[index-1].style.display = "block";  
+            setTimeout(changeSlide, 2000); // Change image every 2 seconds
+          }
+      
+
+
+
+
+
+      </script>
+		
+		
+		
+    	<div id="rightSide">
+            
+            
+			    <h2>Login</h2>
+                <form method="get" action="#">
+                  <div class="positionForm"><label>User-Name</label><input  name="user" type="text" id="user"/></div>
+                    <div class="positionForm"><label>Password &nbsp;</label><input  name="password" type="password" id="password"/></div>
+                    <input class="button_input" type="submit" name="Submit" value="Login" />
+					<input class="button_input2" type="button" name="Submit2" value="Create Account" onclick="window.open('createAccount.html')" />
+                </form>
+			
+            
+               <h2>Website Description</h2>
+            
+                <div class="right_section">
+				
+				   
+				
+                    <p> Fusce vulputate tellus ac felis. Praesent mauris. Quisque gravida faucibus ligula. Aliquam magna. Phasellus id felis.On our website we feature -- of our newest movie previews. If you are looking for certain types of movies check out our --- movie genres. Use our movie search boc in the top right hand of corner to find movies in our data base.Track your Account Information and Rating movies in this site. Check your watched movie list and edite or delete them.</p>
+                                                          
+
+			</div>
+		</div>
+        
+        <div id="LatestMovie">
+        	<div id="LatestMovie_section">
+            	<h1>Latest Movies</h1>
+            	<div class="LatestMovie_box">
+                <img src="images/1.jpg" alt="image" />
+                    <div class="movieTitle">Movie .. 1</div> 
+                   
+              
+                    <div class="moreInfo"><a href="#">More</a></div>
+					
+				</div>
+				
+                <div class="LatestMovie_box">
+                <img src="images/2.jpg" alt="image" />
+                    <div class="movieTitle">Movie .. 2</div>  
+                     
+                    
+                    <div class="moreInfo"><a href="#">More</a></div>
+				</div>
+				
+                <div class="LatestMovie_box">
+                <img src="images/3.jpg" alt="image" />
+                    <div class="movieTitle">Movie .. 3</div>  
+                      
+                    
+                    <div class="moreInfo"><a href="#">More</a></div>
+				</div>
+				
+            
+			
+			<div class="LatestMovie_box">
+                <img src="images/4.jpg" alt="image" />
+                    <div class="movieTitle">Movie .. 4</div>  
+                     
+                    
+                    <div class="moreInfo"><a href="#">More</a></div>
+				</div>
+				
+				
+				
+				<div class="LatestMovie_box">
+                <img src="images/5.jpg" alt="image" />
+                    <div class="movieTitle">Movie .. 5</div>  
+                   
+                    
+                    <div class="moreInfo"><a href="#">More</a></div>
+				</div>
+				
+				<div class="LatestMovie_box">
+                <img src="images/6.jpg" alt="image" />
+                   <div class="movieTitle">Movie .. 6</div> 
+                     
+                    
+                    <div class="moreInfo"><a href="#">More</a></div>
+				</div>
+				
+			 </div>
+				
+            </div>
+            
+            
+                <div id="popular_section">
+                    <h1 class= "styleHeader">Popular movies </h1>
+                    <div class="popular_box">
+                        <img src="images/sample.jpg" alt="image" />
+                        <h3>Title 1</h3> 
+                        
+                        <p>Maecenas vulputate, arcu id fermentum eleifend, tortor enim tincidunt mauris, fringilla tincidunt purus urna vel risus. <a href="#">more...</a>
+                        </p>
+                    </div>
+                    <div class="popular_box">
+                        <img src="images/sample.jpg" alt="image" />
+                        <h3>Title 2</h3> 
+                        
+                        <p> Fusce vulputate tellus ac felis. Praesent mauris. Quisque gravida faucibus ligula. Aliquam magna. Phasellus id felis. <a href="#">more...</a>
+                        </p>
+                    </div>
+					
+					<div class="popular_box">
+                        <img src="images/sample.jpg" alt="image" />
+                        <h3>Title 3</h3> 
+                        
+                        <p> Fusce vulputate tellus ac felis. Praesent mauris. Quisque gravida faucibus ligula. Aliquam magna. Phasellus id felis. <a href="#">more...</a>
+                        </p>
+                    </div>
+					<div class="popular_box">
+                        <img src="images/sample.jpg" alt="image" />
+                        <h3>Title 3</h3> 
+                        
+                        <p> Fusce vulputate tellus ac felis. Praesent mauris. Quisque gravida faucibus ligula. Aliquam magna. Phasellus id felis. <a href="#">more...</a>
+                        </p>
+                    </div>
+                    <div class="moreInfo2"><a href="#">View All</a></div>
+                </div> 
+                
+                
+     
+            
+		</div>
+    </div>
+    
+    
+	<div id="footer">
+        <a href="#">Home</a> | <a href="#">Videos</a> | <a href="#">Videos</a> | <a href="#">Videos</a> | <a href="#">Videos</a> | <a href="#">Contact</a><br />
+        Copyright © <a href="#"><strong>Name</strong></a> 
+        
+	</div>
+
+
+
+</body>
+</html>

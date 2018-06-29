@@ -1,0 +1,123 @@
+<% include ../partials/header %>
+
+<script>
+  window.addEventListener("load", function() { 
+    document.getElementById("defaultClicked").click();
+  });
+  function openDiv(evt, name) {
+    var k, tabcontent, tabPress;
+    tabcontent = document.getElementsByClassName("tabContent_account");
+    for (k = 0; k < tabcontent.length; k++) {
+      tabcontent[k].style.display = "none";
+    }
+    tabPress = document.getElementsByClassName("tabPress");
+    for (k = 0; k < tabPress.length; k++) {
+      tabPress[k].className = tabPress[k].className.replace(" active", "");
+    }
+    document.getElementById(name).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+
+<div>
+   <div>
+     <h1 class= "styleHeader">Account Information</h1>
+     <table id = "tableProfile">
+      <tr>
+        <td id="profile"><label>Username</label></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="tabInfo">
+            <button id="defaultClicked" class="tabPress" onclick="openDiv(event, 'profileInfo')">Profile Information</button>
+            <button class="tabPress" onclick="openDiv(event, 'WatchedList')">Watched List</button>
+            <button class="tabPress" onclick="openDiv(event, 'PlantoWatch')">Plan to Watch</button>
+          </div>
+
+          <div id="profileInfo" class="tabContent_account">
+            <h3>Profile Information</h3>
+            <p>User ID: <%= accountData.userID %> </p>
+            <p>Username: <%= accountData.username %> </p>
+            <p>First Name: <%= accountData.first_name %> </p>
+            <p>Last Name: <%= accountData.last_name %> </p>
+            <p>Email: <%= accountData.email %> </p>
+            <hr>
+            <p>Movies Watched: <%= stats[0] %> hours</p>
+            <p>Time Spent Watching: <%= stats[1] %> </p>
+            <p>Reviews Made: N/A </p>
+            <p>Average Rating: N/A </p>
+          </div>
+
+          <div id="WatchedList" class="tabContent_account">
+            <h3>Watched List</h3>
+            <div class="grid-container2">
+              <% movies.forEach(function(movie, index){ %>
+                <% if(movie.watched == '1'){ %>
+                  <div class="grid-item">
+                    <figure>
+                      <a href = "/selectedMovie/:<%= movie.TMDB_ID %>">
+                          <img src="<%= 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/'+ images[index] %>"
+                            alt= "<%= movie.title %>" width = 125px; height = 175px;
+                          />
+                      </a>
+                      <figcaption>
+                        <label>
+                          <a href = "/selectedMovie/:<%= movie.TMDB_ID %>"><%= movie.title %></a>
+                        </label>
+                      </figcaption>
+                    </figure> 
+                  </div>
+                <% } %>
+              <% }); %>
+            </div>
+            <div class="pagination2">
+              <a href="#">&laquo;</a>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">&raquo;</a>
+            </div>
+          </div>
+
+          <div id="PlantoWatch" class="tabContent_account">
+            <h3>Plan to Watch</h3>
+            <div class="grid-container2">
+              <% movies.forEach(function(movie, index){ %>
+              <% if(movie.watched == '0'){ %>
+              <div class="grid-item">
+                <figure>
+                  <a href = "/selectedMovie/:<%= movie.TMDB_ID %>">
+                    <img src="<%= 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/'+ images[index] %>"
+                    alt= "<%= movie.title %>" width = 125px; height = 175px;
+                    />
+                  </a>
+                  <figcaption>
+                    <label>
+                      <a href = "/selectedMovie/:<%= movie.TMDB_ID %>"><%= movie.title %></a>
+                    </label>
+                  </figcaption>
+                </figure> 
+              </div>
+              <% } %>
+              <% }); %>
+            </div>
+            <div class="pagination2">
+              <a href="#">&laquo;</a>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">&raquo;</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<% include ../partials/footer %>
